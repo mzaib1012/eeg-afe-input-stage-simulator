@@ -34,7 +34,7 @@ $$A_{v(\text{dB})} = 20 \cdot \log_{10}(21) \approx 26.44 \text{ dB}$$
 
 The complete circuit layout was constructed with optimized spatial routing to isolate the sensitive microvolt-level biopotential inputs from the power supply lines.
 
-![Biomedical AFE Schematic](images/afe_schematic.png)
+![Biomedical AFE Schematic](images/afe_schematic.jpg)
 
 ---
 
@@ -45,7 +45,7 @@ An AC frequency sweep analysis (`.ac dec 100 0.1 10k`) was conducted to evaluate
 ### 1. Differential Passband Gain
 Probing the output node of $U_3$ confirms a flawless, ultra-flat differential gain response matching the mathematical expectation at **$+26.46\text{ dB}$**. The gain variation across the medical passband is less than $0.03\text{ dB}$, ensuring zero distortion of the biological wave frequencies.
 
-![AC Gain Response](images/gain_response.png)
+![AC Gain Response](images/gain_response.jpg)
 
 ### 2. RLD Error Stabilization
 Probing the output of the active common-mode cancellation feedback network (`RLD_OUT`) shows deep attenuation under differential excitation (sitting below **$-140\text{ dB}$**), verifying that the inverting error amplifier is stable, well-compensated by the parallel $1.5\text{ nF}$ and $1\text{ M}\Omega$ network, and completely free of self-oscillation.
@@ -70,5 +70,5 @@ eeg-afe-input-stage-simulator/
 ├── eeg-afe-project.asc         # Main LTspice schematic blueprint file
 ├── README.md                   # Project documentation and performance summary
 └── images/                     # Embedded high-resolution simulation graphics
-    ├── afe_schematic.png       # Schematic circuit capture diagram
-    └── gain_response.png       # Frequency response magnitude & phase plot
+    ├── afe_schematic.jpg       # Schematic circuit capture diagram
+    └── gain_response.jpg       # Frequency response magnitude & phase plot
